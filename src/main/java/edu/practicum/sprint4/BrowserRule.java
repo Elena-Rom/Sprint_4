@@ -1,5 +1,7 @@
 package edu.practicum.sprint4;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.rules.ExternalResource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,17 +17,17 @@ public class BrowserRule extends ExternalResource{
         return webDriver;
     }
 
-    @Override
-    protected void before() {
+    @Before
+    public void before() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
 
         webDriver = new ChromeDriver(options);
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
     }
 
-    @Override
-    protected void after() {
+    @After
+    public void after() {
         webDriver.quit();
     }
 }

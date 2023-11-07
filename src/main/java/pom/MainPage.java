@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.time.Duration;
+
 public class MainPage {
 
 
@@ -52,6 +54,7 @@ public class MainPage {
 
 
     public String getAnswer(int index) {
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         return webDriver.findElements(textGet).get(index).getText();
     }
 

@@ -52,7 +52,7 @@ public class OrderScooterTest {
                 .open()
                 .clickOrderDown();
 
-        assertTrue("Форма заказала не отобразилась",
+        assertTrue("Форма заказа не отобразилась",
                 orderUser.checkShowForm());
     }
 
