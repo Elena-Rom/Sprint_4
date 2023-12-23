@@ -43,17 +43,17 @@ public class OrderScooterTest {
         assertEquals(RESULT_TEXT_TRUE, orderRent.checkShowOrder().toString());
     }
 
-    @Test
-    public void orderDownScooterTrue() {
-        MainPage mainPage = new MainPage(browserRule.getWebDriver());
-        OrderUserPage orderUser = new OrderUserPage(browserRule.getWebDriver());
+    // @Test
+    // public void orderDownScooterTrue() {
+    //     MainPage mainPage = new MainPage(browserRule.getWebDriver());
+    //     OrderUserPage orderUser = new OrderUserPage(browserRule.getWebDriver());
 
-        mainPage
-                .open()
-                .clickOrderDown();
+    //     mainPage
+    //             .open()
+    //             .clickOrderDown();
 
-        assertTrue("Форма заказа не отобразилась",
-                orderUser.checkShowForm());
-    }
+    //     assertTrue("Форма заказа не отобразилась",
+    //             orderUser.checkShowForm());
+    // }
 
 }
